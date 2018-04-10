@@ -5,7 +5,7 @@ if(!empty($_GET['add_to_cart'])){
     switch ($_GET["add_to_cart"])
     {
         case "46":
-            if (empty($_COOKIE['panier']['pecanNuts'])){
+            if (!isset($_COOKIE['panier']['pecanNuts'])){
                 setCookie("panier[pecanNuts]", 1, time() + 365*24*3600);
                 header ("location: cart.php");
                 exit();
@@ -17,7 +17,7 @@ if(!empty($_GET['add_to_cart'])){
             exit();
             break;
         case "36":
-            if (empty($_COOKIE['panier']['chocolateChips'])){
+            if (!isset($_COOKIE['panier']['chocolateChips'])){
                 setCookie("panier[chocolateChips]", 1, time() + 365*24*3600);
                 header ("location: cart.php");
                 exit();
@@ -29,7 +29,7 @@ if(!empty($_GET['add_to_cart'])){
             exit();
             break;
         case "58":
-            if (empty($_COOKIE['panier']['chocolateCookie'])){
+            if (!isset($_COOKIE['panier']['chocolateCookie'])){
                 setCookie("panier[chocolateCookie]", 1, time() + 365*24*3600);
                 header ("location: cart.php");
                 exit();
@@ -41,7 +41,7 @@ if(!empty($_GET['add_to_cart'])){
             exit();
             break;
         case "32":
-            if (empty($_COOKIE['panier']['M&M'])){
+            if (!isset($_COOKIE['panier']['M&M'])){
                 setCookie("panier[M&M]", 1, time() + 365*24*3600);
                 header ("location: cart.php");
                 exit();
